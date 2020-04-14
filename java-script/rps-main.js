@@ -53,30 +53,22 @@ function game() {
 
   alert("Welcome to a 5 round game of rock paper scissors!!");
 
-  playerSelection = prompt("Choose: rock, paper or scissors").toLowerCase();
-  computerSelection = computerPlay();
-  alert("The computer has chosen " + computerSelection);
-  alert(playRound(playerSelection, computerSelection));
+  for (i = 0; i != 5; i++) {
+    playerSelection = prompt("Choose: rock, paper or scissors").toLowerCase();
+    computerSelection = computerPlay();
 
-  playerSelection = prompt("Choose: rock, paper or scissors").toLowerCase();
-  computerSelection = computerPlay();
-  alert("The computer has chosen " + computerSelection);
-  alert(playRound(playerSelection, computerSelection));
-
-  playerSelection = prompt("Choose: rock, paper or scissors").toLowerCase();
-  computerSelection = computerPlay();
-  alert("The computer has chosen " + computerSelection);
-  alert(playRound(playerSelection, computerSelection));
-
-  playerSelection = prompt("Choose: rock, paper or scissors").toLowerCase();
-  computerSelection = computerPlay();
-  alert("The computer has chosen " + computerSelection);
-  alert(playRound(playerSelection, computerSelection));
-
-  playerSelection = prompt("Choose: rock, paper or scissors").toLowerCase();
-  computerSelection = computerPlay();
-  alert("The computer has chosen " + computerSelection);
-  alert(playRound(playerSelection, computerSelection));
+    if (
+      playerSelection == "rock" ||
+      playerSelection == "paper" ||
+      playerSelection == "scissors"
+    ) {
+      alert("The computer has chosen " + computerSelection);
+      alert(playRound(playerSelection, computerSelection));
+    } else {
+      alert("You have made an invalid selection, please choose again");
+      i -= 1;
+    }
+  }
 
   alert(
     `${
